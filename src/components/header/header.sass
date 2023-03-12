@@ -1,0 +1,63 @@
+.header
+  position: absolute
+  top: 0
+  width: 100%
+  margin-top: 48px
+  padding: 10px 0
+  @media (max-width: $width-mobile)
+    margin-top: 0
+    background-color: $bg-black
+    padding: 20px 0
+    position: initial
+
+  &__container
+    display: flex
+    gap: 48px
+    justify-content: space-between
+    white-space: nowrap
+    align-items: flex-start
+    @media (max-width: $width-mobile)
+      display: block
+
+  &__logo
+    @media (max-width: $width-mobile)
+      display: none
+
+  &__nav
+    @media (max-width: $width-mobile)
+      width: 100%
+
+  &__nav-list
+    display: flex
+    gap: 16px 32px
+    flex-wrap: wrap
+    @media (max-width: $width-mobile)
+      width: 100%
+      flex-wrap: nowrap
+      text-transform: uppercase
+    @media (max-width: 480px)
+      gap: 16px
+      font-size: 12px
+      justify-content: center
+
+  &__nav-item
+    &--hidden-mobile
+      @media (max-width: $width-mobile)
+        display: none
+
+  &__contacts
+    display: flex
+    gap: 16px 48px
+    margin-left: auto
+    flex-wrap: wrap
+
+  &__social
+    display: flex
+    align-items: center
+    gap: 32px
+    @media (max-width: $width-mobile)
+      display: none
+
+  &__tel
+    @media (max-width: $width-mobile)
+      display: none

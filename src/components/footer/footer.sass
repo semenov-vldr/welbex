@@ -1,0 +1,72 @@
+.footer
+  padding: 56px 0 20px
+  @media (max-width: $width-mobile)
+    padding: 45px 0 60px
+
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 32px
+    @media (max-width: $width-mobile)
+      gap: 48px
+
+  &__menu
+    display: flex
+    justify-content: space-between
+    gap: 96px
+    @media (max-width: $width-tablet)
+      gap: 48px
+    @media (max-width: $width-mobile)
+      flex-direction: column
+      font-size: 14px
+      gap: 32px
+
+  &__menu-list
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &__menu-list--contacts
+    text-align: right
+    gap: 20px
+    @media (max-width: $width-mobile)
+      text-align: left
+      gap: 10px
+
+  &__menu-list--menu
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    gap: 10px 52px
+    margin-right: auto
+    .footer__menu-item--title
+      grid-column: 1/-1
+
+
+  &__menu-title
+    display: inline-block
+    margin-bottom: 10px
+    text-transform: uppercase
+    color: #656566
+    font-size: 14px
+    font-weight: 700
+
+  &__social
+    display: inline-flex
+    gap: 10px
+    align-items: center
+
+
+  &__menu-link--tel
+    white-space: nowrap
+
+  &__copy
+    text-align: right
+    font-size: 12px
+    display: flex
+    flex-direction: column
+    gap: 5px
+    @media (max-width: $width-mobile)
+      text-align: left
+    a
+      text-decoration: underline
+

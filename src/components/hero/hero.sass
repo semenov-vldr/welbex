@@ -1,0 +1,113 @@
+.hero
+  background-image: url('../img/bg-decor.png')
+  height: 100%
+  min-height: 100vh
+  background-position: left top
+  //background-size: 90% auto
+  background-repeat: no-repeat
+  background-size: cover
+  @media (max-width: $width-mobile)
+    background-image: url('../img/bg-decor-mobile.png')
+
+  &__container
+    padding-top: 210px
+    display: flex
+    justify-content: space-between
+    gap: 40px
+    @media (max-width: $width-mobile)
+      padding-top: 40px
+      flex-direction: column
+      justify-content: flex-start
+
+  &__title
+    @include fontSize(36, 48)
+    &-gradient
+      background: linear-gradient(45deg, #FCB045 24.21%, #FF3F78 100%)
+      font-weight: 700
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  &__subtitle
+    margin-top: 32px
+    font-size: 18px
+    @media (max-width: $width-mobile)
+      margin-top: 16px
+
+  &__right
+    display: flex
+    flex-direction: column
+    gap: 60px
+    @media (min-width: $width-mobile)
+      text-align: right
+
+  &__usp
+    display: flex
+    flex-direction: column
+    gap: 40px
+    @media (max-width: $width-mobile)
+      gap: 24px
+
+  &__usp-title
+    font-size: 18px
+    &-gradient
+      background: linear-gradient(-45deg, #FCB045 50%, #FD1D1D 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      font-weight: 700
+
+      @media (min-width: $width-mobile)
+        text-transform: uppercase
+
+  &__usp-list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 32px
+    &--mobile
+      display: none
+    @media (max-width: $width-mobile)
+      width: fit-content
+      grid-gap: 14px 10px
+      &--mobile
+        display: grid
+        .hero__usp-item
+          position: relative
+          display: flex
+          flex-direction: row
+          align-items: center
+          gap: 5px
+          &::before
+            display: inline-block
+            content: ""
+            width: 10px
+            height: 1px
+            background: linear-gradient(45deg, #FCB045 50%, #FD1D1D 100%)
+
+      &--desktop
+        display: none
+
+
+  &__usp-item
+    display: flex
+    flex-direction: column
+    gap: 6px
+
+
+  &__usp-item-name
+    text-transform: uppercase
+    @include fontSize(13, 18)
+    font-weight: 500
+
+
+  &__usp-item-text
+    @media (max-width: $width-mobile)
+      display: none
+
+
+  &__button
+    padding: 21px 35px
+    background-color: #4077F3
+    color: $white
+    cursor: pointer
+    width: fit-content
+    @media (max-width: $width-mobile)
+      padding: 12px 16px
